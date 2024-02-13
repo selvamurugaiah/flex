@@ -1,0 +1,154 @@
+/* what is  flexbox 
+
+css flexbox is also called as flexible box
+flexbox is a one dimensional layout 
+
+using flexbox we can design flexible and efficient layouts and align and distribute sapce among
+items in container
+
+4. the flexible box layout module makes it easier to design flexible
+responsive layout structure without using float or positioning
+
+flex box is alternative for all the css properties to display:flex box
+
+display:inline
+display:bolck
+display:inline-block
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* normal css commented */
+/* .container{
+    background-color: aliceblue;
+    height: 100vh;
+    width:100vw; */
+    /* position: relative; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* .box{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    position: absolute; */
+    /* top: 50%;
+    left:50%;
+    /* transform: translate(-50%,-50%); */
+/* }  */
+
+.container{
+    border: 5px solid black;
+    display: flex;
+    
+}
+
+.flex-item{
+    color: rgb(247, 244, 244);
+    font-size: 18px;
+    padding: 16px;
+    text-align: center;
+}
+.item-1{background-color: aqua;}
+.item-2{background-color: rgb(187, 184, 12);}
+.item-3{background-color: rgb(61, 7, 143);}
+.item-4{background-color: rgb(181, 11, 164);}
+.item-5{background-color: rgb(110, 5, 43);}
+.item-6{background-color: rgb(231, 103, 195);}
+.item-7{background-color: rgb(15, 214, 214);}
+.item-8{background-color: rgb(71, 16, 190);}
+.item-9{background-color: rgb(223, 125, 44);}
+
+/* able to change order */
+/* .item-2{order:1}
+.item-3{order:5} */
+
+/* it will take all the balance space */
+/* .item-3{
+    flex-grow: 1;
+}
+.item-4{
+    flex-grow: 3;
+} */
+/* 
+it will take same space for all box */
+/* .flex-item{
+    flex-grow: 1;
+} */
+
+/* it will maintain content size for all the screen */
+
+/* .flex-item{
+    flex-shrink: 0;
+} */
+
+/* 
+it is used to provide width for specific box */
+/* .item-1{
+    flex-basis: 400px;
+} */
+
+/* flex-grow flex-shrink , flex-basis */
+
+/* .item-1{
+    flex:0 1 auto;
+    flex: 0 0 200px
+} */
+
+body{
+    height: 100vh;
+    width: 100vw;
+  display: grid;  
+  grid-template-areas: 
+  'nav nav nav'
+  'side side side'
+  'aside main main'
+  'item-1 item-2 item-3'
+  'footer footer footer';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:100px 100px 1fr 200px 50px;
+
+}
+
+nav,
+header,
+aside,
+main,
+footer,
+.item-1,
+.item-2,
+.item-3
+{
+    background-color: red;
+    border: 5px solid black;
+    color: white;
+    padding: 20px;
+}
+nav{
+    grid-area: nav;
+}
+header{
+    grid-area:side;
+}
+aside{
+    grid-area:aside;
+}
+main{
+   grid-area:main;
+}
+footer{
+    grid-area:footer;
+}
+.item-1{
+    grid-area:item-1;
+}
+.item-2{
+    grid-area:item-2
+}
+.item-3{
+    grid-area:item-3
+}
